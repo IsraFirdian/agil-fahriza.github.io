@@ -1,7 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
 html, body,
 ul, ol, li,
 h1, h2, h3, h4, h5, h6, p, div {
@@ -30,14 +26,14 @@ a {
 }
 
 .container {
-  width: 1170px;
+  
   padding: 0 10px;
   margin: 0 auto;
 }
 
 header {
   background-color: rgba(70, 130, 180, 0.9);
-  height: 65px;
+
   width: 100%;
   position: fixed;
   top: 0;
@@ -46,7 +42,7 @@ header {
 
 .header-left {
   float: left;
-  width: 124px;
+  
   font-size: 20px;
   margin-top: 20px;
   color: #e0ffff;
@@ -162,4 +158,54 @@ header {
 
 .heading h3 {
   font-weight: normal;
+}
+
+
+
+.header {
+  display: flex;
+}
+.container {
+  flex: auto;
+}
+
+/* Layout untuk Tablet */
+@media (max-width: 1000px) {
+  .header{
+    flex-wrap: wrap;
+  }
+  .container{
+    width: 50%;
+	
+  }
+  .header-left{
+  
+		position:center;
+	
+  }
+  .header-right a{
+  
+		position:inherit;
+	
+  }
+}
+
+
+/* Layout untuk Smartphone */
+/* Tetapkan lebar breakpoint ke 670px dan di bawahnya ke media query */
+@media (max-width: 670px) {
+  /* Tetapkan flex-direction milik .flex-list */
+   .header {
+    flex-direction: column;
+  }
+  
+  /* Tetapkan margin dari .flex-list li ke 0 auto */
+   .container {
+    margin: 0 auto;
+  }
+  .header-left{
+  
+		position:center;
+	
+  }
 }
